@@ -1,13 +1,16 @@
 package com.example.gmart.adapter
 
 import android.content.Context
+import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.gmart.databinding.RowProdColorBinding
-import com.example.gmart.model.ProdColorModel
+import com.example.gmart.model.ProdTypeModel
 
-class RecyclerProdColorAdapter(val context: Context,val colorList:ArrayList<ProdColorModel>):RecyclerView.Adapter<RecyclerProdColorAdapter.ViewHolder>() {
+class RecyclerProdColorAdapter(val context: Context,val colorList:ArrayList<String>):RecyclerView.Adapter<RecyclerProdColorAdapter.ViewHolder>() {
 class ViewHolder(val binding:RowProdColorBinding):RecyclerView.ViewHolder(binding.root){
 
 }
@@ -21,8 +24,8 @@ class ViewHolder(val binding:RowProdColorBinding):RecyclerView.ViewHolder(bindin
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        with(holder.binding) {
-            colorView.setBackgroundResource(colorList[position].prodColor)
-        }
+
+           holder.binding.colorView.setBackgroundColor(Color.parseColor(colorList[position]))
+
     }
 }

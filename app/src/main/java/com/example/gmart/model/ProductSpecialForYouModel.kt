@@ -5,5 +5,5 @@ data class ProductSpecialForYouModel(
     var prodPrice:String,
     var imgProd:Int,
     var txtProd:String,
-    var colorList:ArrayList<ProdColorModel>
+    var colorList:ArrayList<ProdTypeModel>
 )

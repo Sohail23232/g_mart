@@ -15,6 +15,6 @@ class MyCartActivity : AppCompatActivity() {
         binding=ActivityMyCartBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.recViewProduct.layoutManager=LinearLayoutManager(this)
-        binding.recViewProduct.adapter=RecyclerCartItemAdapter(this,MainActivity.productCartList)
+      //  binding.recViewProduct.adapter=RecyclerCartItemAdapter(this,MainActivity.productCartList)
     }
 }
